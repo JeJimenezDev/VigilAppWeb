@@ -7,10 +7,10 @@
 
     <meta charset="UTF-8">
 
-    <!-- Framework Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <title>Resultado</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
@@ -22,20 +22,50 @@
 
         <div class="card-header bg-success text-white">
 
-            <h3 class="text-center">Información Registrada</h3>
+            <h3 class="text-center">Registro Exitoso</h3>
 
         </div>
 
         <div class="card-body">
 
-            <!-- Datos enviados desde el Servlet -->
+            <!-- Información recibida desde el Servlet -->
 
-            <p><strong>Nombre:</strong> ${nombre}</p>
+            <div class="alert alert-success">
 
-            <p><strong>Documento:</strong> ${documento}</p>
+                El usuario fue registrado correctamente.
+
+            </div>
+
+            <table class="table table-bordered">
+
+                <tr>
+
+                    <th>Nombre</th>
+
+                    <td>${nombre}</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Documento</th>
+
+                    <td>${documento}</td>
+
+                </tr>
+
+            </table>
 
             <a href="formulario.html" class="btn btn-primary">
+
                 Registrar otro usuario
+
+            </a>
+
+            <a href="index.jsp" class="btn btn-secondary">
+
+                Volver al inicio
+
             </a>
 
         </div>
@@ -45,4 +75,5 @@
 </div>
 
 </body>
+
 </html>
